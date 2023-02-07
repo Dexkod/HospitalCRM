@@ -1,0 +1,1 @@
+This is a program for managing multiple hospitals, viewing receipts and records for clients
