@@ -1,9 +1,10 @@
 ﻿
+using HospitalsCRM.Model.Interface;
 using System.Collections.Generic;
 
 namespace HospitalCRM.Model
 {
-    public class Office
+    public class Office : IEntity
     {
         public int Id { get; set; }
         public int Number { get; set; }
@@ -19,6 +20,10 @@ namespace HospitalCRM.Model
 
         // Connection with Hospital
         public int? HospitalId { get; set; }
-        public Hospital Hospital { get; set; } 
+        public Clinic Hospital { get; set; }
+        public void Add(IEntity entity, HospitalContext context)
+        {
+            context.Offices.Add((Office)entity);
+        }
     }
 }

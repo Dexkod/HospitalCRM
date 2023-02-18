@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using HospitalsCRM.Model.Interface;
+using System.Collections.Generic;
 
 namespace HospitalCRM.Model
 {
-    public class Hospital
+    public class Clinic : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
 
-        public Hospital()
+        public Clinic()
         {
             Cheques = new List<Cheque>();
             Offices = new List<Office>();
@@ -24,5 +25,9 @@ namespace HospitalCRM.Model
         // Connection with Office
         public ICollection<Office> Offices { get; set; }
 
+        public void Add(IEntity entity, HospitalContext context)
+        {
+            context.Clinics.Add((Clinic)entity);
+        }
     }
 }

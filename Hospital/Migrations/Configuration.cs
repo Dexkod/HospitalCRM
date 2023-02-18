@@ -1,4 +1,4 @@
-﻿namespace HospitalCRM.Migrations
+﻿namespace Hospital.Migrations
 {
     using System;
     using System.Data.Entity;

@@ -6,9 +6,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AA48B9FE-1D3A-461A-9EA4-A2625B6E40B2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Hospital</RootNamespace>
-    <AssemblyName>Hospital</AssemblyName>
+    <AssemblyName>Hospitals</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -46,17 +49,30 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HospitalContext.cs" />
+    <Compile Include="Data\HospitalContext.cs" />
+    <Compile Include="Data\Interface\IBaseRepository.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Migrations\202302161521403_First.cs" />
+    <Compile Include="Migrations\202302161521403_First.designer.cs">
+      <DependentUpon>202302161521403_First.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Cheque.cs" />
     <Compile Include="Model\Company.cs" />
-    <Compile Include="Model\Hospital.cs" />
+    <Compile Include="Model\Clinic.cs" />
+    <Compile Include="Model\Interface\IEntity.cs" />
     <Compile Include="Model\Office.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302161521403_First.resx">
+      <DependentUpon>202302161521403_First.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
