@@ -12,9 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InformationProgram", "Infor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRMView", "CRMView\CRMView.csproj", "{6F0726CB-0B58-4A53-9382-04FBD91D4CA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{41507CB6-EE03-4D63-BE9A-E08AA5584C91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers", "Controllers\Controllers.csproj", "{41507CB6-EE03-4D63-BE9A-E08AA5584C91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllersTests", "ControllersTests\ControllersTests.csproj", "{D927840B-8B27-4661-AFF8-8A71C93EE63B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllersTests", "ControllersTests\ControllersTests.csproj", "{D927840B-8B27-4661-AFF8-8A71C93EE63B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{EA935A86-FB0E-4E91-B40B-6642CE092841}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

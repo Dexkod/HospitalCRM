@@ -1,6 +1,6 @@
 ﻿namespace CRMView
 {
-    partial class Registration
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.RepeatPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.PhoneTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -55,12 +55,12 @@
             this.label3.Text = "Фамилия";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // LastNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 27);
-            this.textBox2.TabIndex = 7;
+            this.LastNameTextBox.Location = new System.Drawing.Point(145, 145);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(161, 27);
+            this.LastNameTextBox.TabIndex = 7;
             // 
             // label2
             // 
@@ -72,12 +72,12 @@
             this.label2.Text = "Имя";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // NameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 27);
-            this.textBox1.TabIndex = 5;
+            this.NameTextBox.Location = new System.Drawing.Point(141, 59);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(161, 27);
+            this.NameTextBox.TabIndex = 5;
             // 
             // label1
             // 
@@ -90,13 +90,13 @@
             this.label1.Text = "Возраст";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // AgeTextBox
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox3.Location = new System.Drawing.Point(145, 232);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 27);
-            this.textBox3.TabIndex = 9;
+            this.AgeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AgeTextBox.Location = new System.Drawing.Point(145, 232);
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.Size = new System.Drawing.Size(161, 27);
+            this.AgeTextBox.TabIndex = 9;
             // 
             // label4
             // 
@@ -109,13 +109,13 @@
             this.label4.Text = "Придумайте Логин";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // LoginTextBox
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(435, 59);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 27);
-            this.textBox4.TabIndex = 11;
+            this.LoginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoginTextBox.Location = new System.Drawing.Point(435, 59);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.Size = new System.Drawing.Size(161, 27);
+            this.LoginTextBox.TabIndex = 11;
             // 
             // label5
             // 
@@ -128,14 +128,14 @@
             this.label5.Text = "Пароль";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // PasswordTextBox
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(435, 145);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PasswordChar = '*';
-            this.textBox5.Size = new System.Drawing.Size(161, 27);
-            this.textBox5.TabIndex = 13;
+            this.PasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PasswordTextBox.Location = new System.Drawing.Point(435, 145);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.Size = new System.Drawing.Size(161, 27);
+            this.PasswordTextBox.TabIndex = 13;
             // 
             // label6
             // 
@@ -148,14 +148,14 @@
             this.label6.Text = "Повторите пароль";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // RepeatPasswordTextBox
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(435, 232);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
-            this.textBox6.Size = new System.Drawing.Size(161, 27);
-            this.textBox6.TabIndex = 15;
+            this.RepeatPasswordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RepeatPasswordTextBox.Location = new System.Drawing.Point(435, 232);
+            this.RepeatPasswordTextBox.Name = "RepeatPasswordTextBox";
+            this.RepeatPasswordTextBox.PasswordChar = '*';
+            this.RepeatPasswordTextBox.Size = new System.Drawing.Size(161, 27);
+            this.RepeatPasswordTextBox.TabIndex = 15;
             // 
             // label7
             // 
@@ -168,13 +168,13 @@
             this.label7.Text = "Введите номер";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox7
+            // PhoneTextBox
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox7.Location = new System.Drawing.Point(288, 331);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(161, 27);
-            this.textBox7.TabIndex = 17;
+            this.PhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.PhoneTextBox.Location = new System.Drawing.Point(288, 331);
+            this.PhoneTextBox.Name = "PhoneTextBox";
+            this.PhoneTextBox.Size = new System.Drawing.Size(161, 27);
+            this.PhoneTextBox.TabIndex = 17;
             // 
             // button1
             // 
@@ -194,19 +194,19 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.RepeatPasswordTextBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.AgeTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NameTextBox);
             this.Name = "Registration";
             this.Text = "Registration";
             this.ResumeLayout(false);
@@ -217,19 +217,19 @@
         #endregion
 
         private Label label3;
-        private TextBox textBox2;
+        private TextBox LastNameTextBox;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox NameTextBox;
         private Label label1;
-        private TextBox textBox3;
+        private TextBox AgeTextBox;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox LoginTextBox;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox PasswordTextBox;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox RepeatPasswordTextBox;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox PhoneTextBox;
         private Button button1;
     }
 }

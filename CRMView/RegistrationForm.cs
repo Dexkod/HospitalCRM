@@ -14,8 +14,10 @@ using Hospitals.Data;
 
 namespace CRMView
 {
-    public partial class Registration : Form
+    public partial class RegistrationForm : Form
     {
+        private Form authorization;
+        private IEnumerable<Person> people;
         private Label labelMessageError = new Label()
         {
             Location = new Point(200, 398),
@@ -26,52 +28,61 @@ namespace CRMView
             Size = new System.Drawing.Size(400, 30),
             TextAlign = ContentAlignment.MiddleCenter
         };
-        public Registration()
+        public RegistrationForm(IEnumerable<Person> people, Form authorization)
         {
+            this.people = people;
             Controls.Add(labelMessageError);
             InitializeComponent();
+            this.authorization = authorization;
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            var people = await Repository.Context.GetPersons();
-            if (!ControllerValidation.IsValidationNullString(textBox1.Text, textBox2.Text, textBox3.Text, 
-                textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text))
+
+            if (!ControllerValidation.IsValidationNullString(NameTextBox.Text, LastNameTextBox.Text, AgeTextBox.Text, 
+                LoginTextBox.Text, PasswordTextBox.Text, RepeatPasswordTextBox.Text, PhoneTextBox.Text))
             {
                 labelMessageError.Text = "Заполните все строки";
             }
-            else if (!ControllerValidation.IsValidationLineLetter(textBox1.Text, textBox2.Text))
+            else if (!ControllerValidation.IsValidationLineLetter(NameTextBox.Text, LastNameTextBox.Text))
             {
                 labelMessageError.Text = "Вы ввели неправильное имя или фамилию";
             }
-            else if (!ControllerValidation.IsLineNumbers(textBox3.Text) || 
-                !(int.Parse(textBox3.Text) >= 14 && int.Parse(textBox3.Text) <= 120))
+            else if (!ControllerValidation.IsLineNumbers(AgeTextBox.Text) || 
+                !(int.Parse(AgeTextBox.Text) >= 14 && int.Parse(AgeTextBox.Text) <= 120))
             {
                 labelMessageError.Text = "Неправильный ввод возраста";
             }
-            else if (!textBox5.Text.Equals(textBox6.Text) || textBox5.Text.Length < 8)
+            else if (!PasswordTextBox.Text.Equals(RepeatPasswordTextBox.Text) || PasswordTextBox.Text.Length < 8)
             {
                 labelMessageError.Text = "Вы ввели некорректный пароль";
             }
-            else if (people.Where(x => x.Login != null).Any(x => x.Login.Equals(textBox4.Text)))
+            else if (people.Where(x => x.Login != null).Any(x => x.Login.Equals(LoginTextBox.Text)))
             {
                 labelMessageError.Text = "Пользователь с таким логином уже существует";
             }
-            else if (!ControllerValidation.IsLineNumbers(textBox7.Text) || textBox7.Text.Length < 10)
+            else if (!ControllerValidation.IsLineNumbers(PhoneTextBox.Text) || PhoneTextBox.Text.Length != 11)
             {
                 labelMessageError.Text = "Вы ввели неправильный номер";
             }
-            else if (labelMessageError.Text.Length > 1)
+            else
             {
                 labelMessageError.Text = "";
-                await Repository.Context.Add(new Person(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text),
-                    textBox4.Text, ControllerPassword.PasswordEncryption(textBox5.Text), int.Parse(textBox7.Text)));
+                var human = new Person(NameTextBox.Text, LastNameTextBox.Text, int.Parse(AgeTextBox.Text),
+                    LoginTextBox.Text, ControllerPassword.PasswordEncryption(PasswordTextBox.Text), Convert.ToInt64(PhoneTextBox.Text));
+                Repository.Context.Add(human);
+                LogInToYourAccount(human);
+                
             }
-            
-
         }
 
-
+        private void LogInToYourAccount(Person person)
+        {
+            AccountInfoForm accountInfo = new AccountInfoForm(person);
+            this.Hide();
+            authorization.Hide();
+            accountInfo.Show();
+        }
 
 
     }

@@ -13,14 +13,15 @@ namespace HospitalCRM.Model
         public string LastName { get;set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public int Phone { get; set; }
+        public long Phone { get; set; }
+        public string UrlImage { get; set; }
 
         public Person()
         {
             Cheques = new List<Cheque>();
         }
         
-        public Person(string name, string lastName, int age, string login, string password,int phone)
+        public Person(string name, string lastName, int age, string login, string password,long phone)
         {
             Name = name;
             Age = age;
