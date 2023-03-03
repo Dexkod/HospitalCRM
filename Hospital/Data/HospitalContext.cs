@@ -1,4 +1,5 @@
 ﻿
+using Hospital;
 using HospitalCRM.Model;
 using System.Data.Entity;
 
@@ -14,5 +15,6 @@ namespace HospitalCRM
         public DbSet<Office> Offices { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Medication> Medications { get; set; }
     }
 }

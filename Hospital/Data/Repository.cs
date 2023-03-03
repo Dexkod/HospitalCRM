@@ -1,5 +1,6 @@
 ﻿
 
+using Hospital;
 using HospitalCRM;
 using HospitalCRM.Model;
 using HospitalsCRM.Data;
@@ -70,7 +71,10 @@ namespace Hospitals.Data
         {
             return await Dbcontext.Offices.ToListAsync();
         }
-
+        public async Task<IEnumerable<Medication>> GetMedications()
+        {
+            return await Dbcontext.Medications.ToListAsync();
+        }
         public async Task<IEnumerable<Person>> GetPersons()
         {
             return await Task.Run(() => Dbcontext.Persons.ToListAsync());

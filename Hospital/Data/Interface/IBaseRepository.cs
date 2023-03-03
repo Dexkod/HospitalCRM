@@ -1,4 +1,5 @@
 ﻿
+using Hospital;
 using HospitalCRM.Model;
 using HospitalsCRM.Model.Interface;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace HospitalsCRM.Data
         Task<IEnumerable<Clinic>> GetHospitals();
         Task<IEnumerable<Office>> GetOffices();
         Task<IEnumerable<Person>> GetPersons();
+        Task<IEnumerable<Medication>> GetMedications();
         Task<IEnumerable<Service>> GetServices();
         Task Add(IEntity entity);
         Task Delete(IEntity entity);

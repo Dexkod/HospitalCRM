@@ -91,6 +91,7 @@
             this.PharmacyButton.TabIndex = 1;
             this.PharmacyButton.Text = "Аптека";
             this.PharmacyButton.UseVisualStyleBackColor = true;
+            this.PharmacyButton.Click += new System.EventHandler(this.PharmacyButton_Click);
             // 
             // AccountButton
             // 
@@ -127,6 +128,7 @@
             this.EditPhotoLabel.TabIndex = 3;
             this.EditPhotoLabel.Text = "Изменить";
             this.EditPhotoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EditPhotoLabel.Click += new System.EventHandler(this.EditPhotoLabel_Click);
             // 
             // LoginLabel
             // 
@@ -215,6 +217,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Следующая покупка";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ChangeNameLabel
             // 

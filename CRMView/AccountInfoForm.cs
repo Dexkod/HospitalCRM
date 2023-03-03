@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Hospital;
 using HospitalCRM.Model;
 using Hospitals.Data;
 using System;
@@ -27,8 +28,13 @@ namespace CRMView
             LoginLabel.Text = person.Login;
             LastNameLabel.Text = person.LastName;
             NameLabel.Text = person.Name;
+            AddMedication();
         }
 
+        private async void AddMedication()
+        {
+            await Repository.Context.Add(new Medication(1, "Аскорбинка", "Витамины", 200, 5, "Апельсиновые"));
+        }
         private void AccountInfo_Load(object sender, EventArgs e)
         {
 
@@ -189,5 +195,33 @@ namespace CRMView
                 textBoxChange = null;
             }
         }
+
+        private async void PharmacyButton_Click(object sender, EventArgs e)
+        {
+
+            var medications = await Repository.Context.GetMedications();
+            if (medications == null)
+            {
+                MessageBox.Show("Аптека прогружается повторите попытку через несколько секунд", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                this.Hide();
+                StoryForm storyForm = new StoryForm(person, medications.ToList());
+                storyForm.Show();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditPhotoLabel_Click(object sender, EventArgs e)
+        {
+            //ToDo
+        }
+
+
     }
 }

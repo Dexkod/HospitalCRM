@@ -56,6 +56,11 @@
     <Compile Include="Data\HospitalContext.cs" />
     <Compile Include="Data\Interface\IBaseRepository.cs" />
     <Compile Include="Data\Repository.cs" />
+    <Compile Include="Migrations\202303032038184_AddMedication.cs" />
+    <Compile Include="Migrations\202303032038184_AddMedication.designer.cs">
+      <DependentUpon>202303032038184_AddMedication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Medication.cs" />
     <Compile Include="Migrations\202302161521403_First.cs" />
     <Compile Include="Migrations\202302161521403_First.designer.cs">
       <DependentUpon>202302161521403_First.cs</DependentUpon>
@@ -72,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202302161521403_First.resx">
       <DependentUpon>202302161521403_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303032038184_AddMedication.resx">
+      <DependentUpon>202303032038184_AddMedication.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
