@@ -28,13 +28,9 @@ namespace CRMView
             LoginLabel.Text = person.Login;
             LastNameLabel.Text = person.LastName;
             NameLabel.Text = person.Name;
-            AddMedication();
         }
 
-        private async void AddMedication()
-        {
-            await Repository.Context.Add(new Medication(1, "Аскорбинка", "Витамины", 200, 5, "Апельсиновые"));
-        }
+
         private void AccountInfo_Load(object sender, EventArgs e)
         {
 

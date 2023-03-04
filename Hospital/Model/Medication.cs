@@ -22,8 +22,6 @@ namespace Hospital
             Pricy = pricy;
             Count = count;
             Info = info;
-            //ChequeId = 1;
-            //Cheque = default;
         }
         public void Add(IEntity entity, HospitalContext context)
         {
