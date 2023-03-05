@@ -123,9 +123,21 @@ namespace CRMView
         {
             Button button = (Button)sender;
             int count = int.Parse(button.Name[button.Name.Length - 1] + "");
-            if (numericUpDowns[count].Value > 0)
+            if (numericUpDowns[count].Value > 0 && payMedications.Keys.FirstOrDefault(x => x.Equals(medications[count])) == default)
             {
                 payMedications.Add(medications[count], Convert.ToInt32(numericUpDowns[count].Value));
+            }
+            else if (numericUpDowns[count].Value > 0)
+            {
+                if(payMedications[medications[count]] + Convert.ToInt32(numericUpDowns[count].Value)
+                    <= medications[count].Count)
+                {
+                    payMedications[medications[count]] += Convert.ToInt32(numericUpDowns[count].Value);
+                }
+                else
+                {
+                    payMedications[medications[count]] = medications[count].Count;
+                }
             }
             else
             {
