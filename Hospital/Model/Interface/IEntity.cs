@@ -6,6 +6,6 @@ namespace HospitalsCRM.Model.Interface
     public interface IEntity
     {
         int Id { get; set; }
-        void Add(IEntity entity, HospitalContext context);
+        void Add(IEntity entity, ClinicContext context);
     }
 }

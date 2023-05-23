@@ -10,7 +10,7 @@ namespace HospitalsCRM.Data
     public interface IBaseRepository
     {
         Task SaveChangesAsync();
-        Task<IEnumerable<Cheque>> GetCheques();
+        //Task<IEnumerable<Cheque>> GetCheques();
         Task<IEnumerable<Company>> GetCompanys();
         Task<IEnumerable<Clinic>> GetHospitals();
         Task<IEnumerable<Office>> GetOffices();

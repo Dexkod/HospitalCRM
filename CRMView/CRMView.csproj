@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Controllers\Controllers.csproj" />
-    <ProjectReference Include="..\Hospital\HospitalsCRM.csproj" />
+    <ProjectReference Include="..\Hospital\HospitalCRM.csproj" />
   </ItemGroup>
 
   <ItemGroup>

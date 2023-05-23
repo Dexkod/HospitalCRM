@@ -17,15 +17,15 @@ namespace Hospitals.Data
 {
     public sealed class Repository : IBaseRepository
     {
-        private HospitalContext Dbcontext;
+        private ClinicContext Dbcontext;
         private static Repository context;
-        private Repository(HospitalContext Dbcontext){ this.Dbcontext = Dbcontext; }
+        private Repository(ClinicContext Dbcontext){ this.Dbcontext = Dbcontext; }
         public static Repository Context { 
             get
             {
                 if (context == null)
                 {
-                    context = new Repository(new HospitalContext());
+                    context = new Repository(new ClinicContext());
                 }
                 return context;
             } 
@@ -52,10 +52,10 @@ namespace Hospitals.Data
             await Dbcontext.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Cheque>> GetCheques()
-        {
-            return await Dbcontext.Cheques.ToListAsync();
-        }
+        //public async Task<IEnumerable<Cheque>> GetCheques()
+        //{
+        //    return await Dbcontext.Cheques.ToListAsync();
+        //}
 
         public async Task<IEnumerable<Company>> GetCompanys()
         {

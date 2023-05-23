@@ -26,15 +26,14 @@ namespace CRMView
                 MessageBox.Show("Неправильно введены реквизиты", "Ошибка", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-            else if(!ControllerValidation.IsValidationLineLetter(ExpirationDateTextBox.Text) ||
-                ExpirationDateTextBox.Text.Length != 5 || ExpirationDateTextBox.Text.Contains("/") ||
-                DateTime.Now < Data(ExpirationDateTextBox))
+            else if(!ControllerValidation.IsLineNumbers(ExpirationDateTextBox.Text.Replace('/','9').Replace(' ', '0')) || 
+                !ExpirationDateTextBox.Text.Contains("/") || DateTime.Now > Data(ExpirationDateTextBox))
             {
                 MessageBox.Show("Неправильно введена срок годности", "Ошибка", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-            else if(!ControllerValidation.IsValidationLineLetter(CVVTextBox.Text) ||
-                CVVTextBox.Text.Length != 3)
+            else if(!ControllerValidation.IsLineNumbers(CVVTextBox.Text) ||
+                CVVTextBox.Text.Where(x => x != ' ').Count() != 3)
             {
                 MessageBox.Show("Неправильно введена CVV", "Ошибка", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -53,7 +52,7 @@ namespace CRMView
             if(int.Parse(data.Text.Split("/")[0]) <= 12)
             {
                 mouth= int.Parse(data.Text.Split("/")[0]);
-                year= int.Parse("20" + data.Text.Split("/")[1]);
+                year = data.Text.Split("/")[1].Length == 2 ? int.Parse("20" + data.Text.Split("/")[1]) : 1;
             }
             return new DateTime(year, mouth, 1);
         }

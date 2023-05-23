@@ -26,6 +26,7 @@ namespace CRMView
         public StoryForm(Person people, List<Medication> medications)
         {
             this.medications = medications;
+            AddChequeMedication();
             this.people = people;
             InitializeComponent();
             CreateViewMedications();
@@ -33,6 +34,15 @@ namespace CRMView
             AddControls(0,countNext);
         }
 
+        private void AddChequeMedication()
+        {
+            //var cheque = 
+            //foreach(var item in medications)
+            //{
+            //    item.Cheque = new Cheque(1,Data);
+            //    item.ChequeId = 1;
+            //}
+        }
         private void RemoveControls(int startIndex, int endIndex)
         {
             for (int i = startIndex; i < endIndex; i++)

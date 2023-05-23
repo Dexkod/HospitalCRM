@@ -5,10 +5,9 @@ using System.Data.Entity;
 
 namespace HospitalCRM
 {
-    public class HospitalContext : DbContext
+    public class ClinicContext : DbContext
     {
-        public HospitalContext() : base ("HospitalContext") { }
-
+        public ClinicContext() : base ("ClinicContext") { }
         public DbSet<Cheque> Cheques { get; set; }
         public DbSet<Company> Companys { get; set; }
         public DbSet<Clinic> Clinics { get; set; }

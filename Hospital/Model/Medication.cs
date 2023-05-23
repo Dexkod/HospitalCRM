@@ -1,11 +1,11 @@
-﻿using HospitalCRM;
-using HospitalCRM.Model;
-using HospitalsCRM.Model.Interface;
+﻿using HospitalsCRM.Model.Interface;
+using System.ComponentModel.DataAnnotations;
 
-namespace Hospital
+namespace HospitalCRM.Model
 {
     public class Medication : IEntity
     {
+        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public string ViewInfo { get; set; }
@@ -14,7 +14,7 @@ namespace Hospital
         public string Info { get; set; }
 
         public Medication(){}
-        public Medication(int id, string name, string viewInfo, int pricy, int count, string info)
+        public Medication(int id, string name, string viewInfo, int pricy, int count, string info, Cheque cheque)
         {
             Id = id;
             Name = name;
@@ -22,15 +22,15 @@ namespace Hospital
             Pricy = pricy;
             Count = count;
             Info = info;
+            Cheque = cheque;
         }
-        public void Add(IEntity entity, HospitalContext context)
+        public void Add(IEntity entity, ClinicContext context)
         {
             context.Medications.Add((Medication)entity);
         }
 
-        // Connection with Card
-
-        //public int ChequeId { get; set; }
-        //public Cheque Cheque { get; set; }
+        //Connection with Cheque
+        public int? ChequeId { get; set; }
+        public Cheque Cheque { get; set; }
     }
 }

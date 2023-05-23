@@ -3,12 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalsCRM", "Hospital\HospitalsCRM.csproj", "{AA48B9FE-1D3A-461A-9EA4-A2625B6E40B2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InformationProgram", "InformationProgram", "{3390312B-8E99-427F-9D39-0643D4D1A026}"
-	ProjectSection(SolutionItems) = preProject
-		Information.txt = Information.txt
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCRM", "Hospital\HospitalCRM.csproj", "{AA48B9FE-1D3A-461A-9EA4-A2625B6E40B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRMView", "CRMView\CRMView.csproj", "{6F0726CB-0B58-4A53-9382-04FBD91D4CA6}"
 EndProject
@@ -17,6 +12,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllersTests", "ControllersTests\ControllersTests.csproj", "{D927840B-8B27-4661-AFF8-8A71C93EE63B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{EA935A86-FB0E-4E91-B40B-6642CE092841}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{DA02E756-8A42-4F04-8A95-420E2CAA0018}"
+	ProjectSection(SolutionItems) = preProject
+		Description.docx = Description.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
